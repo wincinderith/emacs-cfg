@@ -44,9 +44,6 @@
 (ac-config-default)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-(require 'whitespace)
-(setq whitespace-style '(face tabs lines-tail))
-(global-whitespace-mode t)
 
 (setq-default c-basic-offset 4
   tab-width 4)
