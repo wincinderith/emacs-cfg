@@ -44,6 +44,14 @@
 (ac-config-default)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(require 'whitespace)
+(setq whitespace-style '(face lines-tail tabs tab-mark))
+(set-face-background 'whitespace-line nil)
+(set-face-background 'whitespace-tab nil)
+(set-face-foreground 'whitespace-tab "cyan")
+(setq whitespace-display-mappings
+  '((tab-mark ?\t [?\xAC ?\t] [?\t])))
+(global-whitespace-mode t)
 
 (setq-default c-basic-offset 4
   tab-width 4)
