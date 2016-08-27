@@ -62,3 +62,6 @@
 (setq delete-old-versions t)
 
 (electric-pair-mode t)
+
+(custom-set-variables '(inhibit-startup-screen t))
+(custom-set-variables '(custom-enabled-themes (quote (adwaita))))
