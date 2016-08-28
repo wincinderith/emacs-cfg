@@ -63,5 +63,8 @@
 
 (electric-pair-mode t)
 
-(custom-set-variables '(inhibit-startup-screen t))
-(custom-set-variables '(custom-enabled-themes (quote (adwaita))))
+(custom-set-variables
+ '(custom-enabled-themes (quote (adwaita)))
+ '(inhibit-startup-screen t))
+(custom-set-faces
+ '(default ((t (:family "Roboto Mono" :foundry "pyrs" :slant normal :weight normal :height 90 :width normal)))))
