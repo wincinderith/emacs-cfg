@@ -65,6 +65,7 @@
 
 (custom-set-variables
  '(custom-enabled-themes (quote (adwaita)))
- '(inhibit-startup-screen t))
+ '(inhibit-startup-screen t)
+ '(tool-bar-mode nil))
 (custom-set-faces
  '(default ((t (:family "Roboto Mono" :foundry "pyrs" :slant normal :weight normal :height 90 :width normal)))))
