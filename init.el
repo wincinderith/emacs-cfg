@@ -5,6 +5,13 @@
     '("melpa" . "http://melpa.org/packages/") t)
   (package-initialize))
 
+(defun my-asm-mode-hook ()
+  "Hook for asm-mode."
+  (local-set-key (kbd "TAB") 'self-insert-command)
+  (setq indent-line-function nil)
+  (setq tab-always-indent (default-value 'tab-always-indent)))
+(add-hook 'asm-mode-hook 'my-asm-mode-hook)
+
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
 (add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
