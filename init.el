@@ -40,6 +40,9 @@
 (use-package auto-complete
   :config (ac-config-default))
 
+(use-package undo-tree
+  :config (global-undo-tree-mode))
+
 (electric-pair-mode t)
 
 (require 'whitespace)
