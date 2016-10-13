@@ -19,29 +19,34 @@
   :config (setq lua-indent-level 4))
 
 (use-package web-mode
-  :mode (("\\.css\\'" . web-mode)
-         ("\\.scss\\'" . web-mode)
-         ("\\.hbs\\'" . web-mode)
-         ("\\.html\\'" . web-mode)
-         ("\\.js\\'" . web-mode)
-         ("\\.json\\'" . web-mode)
-         ("\\.xml\\'" . web-mode))
-  :config ((web-mode-use-tabs)
-           (setq web-mode-enable-auto-quoting t)
-           (setq web-mode-enable-auto-pairing t)
-           (setq web-mode-enable-auto-closing t)
-           (setq web-mode-style-padding 4)
-           (setq web-mode-script-padding 4)
-           (setq web-mode-block-padding 4)
-           (setq web-mode-markup-indent-offset 4)
-           (setq web-mode-css-indent-offset 4)
-           (setq web-mode-code-indent-offset 4)))
+  :mode
+  ("\\.css\\'" . web-mode)
+  ("\\.scss\\'" . web-mode)
+  ("\\.hbs\\'" . web-mode)
+  ("\\.html\\'" . web-mode)
+  ("\\.js\\'" . web-mode)
+  ("\\.json\\'" . web-mode)
+  ("\\.xml\\'" . web-mode)
+  :config
+  (web-mode-use-tabs)
+  (setq web-mode-enable-auto-quoting t)
+  (setq web-mode-enable-auto-pairing t)
+  (setq web-mode-enable-auto-closing t)
+  (setq web-mode-style-padding 4)
+  (setq web-mode-script-padding 4)
+  (setq web-mode-block-padding 4)
+  (setq web-mode-markup-indent-offset 4)
+  (setq web-mode-css-indent-offset 4)
+  (setq web-mode-code-indent-offset 4))
 
 (use-package auto-complete
   :config (ac-config-default))
 
 (use-package undo-tree
-  :config (global-undo-tree-mode))
+  :config
+  (global-undo-tree-mode)
+  (setq undo-tree-visualizer-diff t)
+  (setq undo-tree-visualizer-timestamps t))
 
 (electric-pair-mode t)
 
