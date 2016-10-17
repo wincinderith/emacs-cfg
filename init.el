@@ -54,13 +54,12 @@
 (set-face-background 'whitespace-line nil)
 (set-face-background 'whitespace-tab nil)
 (set-face-foreground 'whitespace-tab "cyan")
-(setq whitespace-display-mappings
-      '((tab-mark ?\t [?\xAC ?\t] [?\t])))
+(setq whitespace-display-mappings '((tab-mark ?\t [?\xAC ?\t] [?\t])))
 (global-whitespace-mode t)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-(setq-default c-basic-offset 4
-              tab-width 4)
+(setq-default c-basic-offset 4)
+(setq-default tab-width 4)
 (setq indent-tabs-mode t)
 
 (setq backup-directory-alist '(("." . "~/.emacs.d/backup/")))
