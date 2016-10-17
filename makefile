@@ -19,9 +19,10 @@ fetch-deps:
 	wget http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
 	unzip -ju -d markdown Markdown_1.0.1.zip ; rm Markdown_1.0.1.zip
 
-fetch-updates: clean fetch-deps
+fetch-updates:
 	git pull --rebase --prune
+	git submodule update --init --recursive
 
-update: fetch-updates build
+update: clean fetch-updates fetch-deps build
 
-default: update build install
+default: update install
