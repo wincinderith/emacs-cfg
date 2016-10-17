@@ -29,6 +29,7 @@
   (setq markdown-preview-command "markdown-preview"))
 
 (use-package web-mode
+  :commands (web-mode-use-tabs)
   :mode
   ("\\.css\\'" . web-mode)
   ("\\.scss\\'" . web-mode)
@@ -50,9 +51,11 @@
   (setq web-mode-code-indent-offset 4))
 
 (use-package auto-complete
+  :commands (ac-config-default)
   :config (ac-config-default))
 
 (use-package undo-tree
+  :commands (global-undo-tree-mode)
   :config
   (global-undo-tree-mode)
   (setq undo-tree-visualizer-timestamps t))
