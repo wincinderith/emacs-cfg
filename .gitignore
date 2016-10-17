@@ -3,3 +3,5 @@ backup/
 elpa/
 markdown/
 ac-comphist.dat
+
+**/*.elc

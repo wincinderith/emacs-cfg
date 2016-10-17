@@ -4,7 +4,7 @@ LINK=$(HOME)/.emacs.d
 .PHONY: build clean install uninstall default fetch-deps fetch-updates update
 
 build:
-	echo build
+	emacs --batch -L use-package -f batch-byte-compile init.el
 
 clean:
 	git reset --hard

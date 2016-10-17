@@ -19,11 +19,11 @@
   :config (setq lua-indent-level 4))
 
 (use-package markdown-mode
+  :commands (markdown-mode gfm-mode)
   :mode
   ("README\\.md\\'" . gfm-mode)
   ("\\.md\\'" . markdown-mode)
   ("\\.markdown\\'" . markdown-mode)
-  :commands (markdown-mode gfm-mode)
   :init
   (setq markdown-command "~/.emacs.d/markdown/Markdown.pl")
   (setq markdown-preview-command "markdown-preview"))
