@@ -50,6 +50,9 @@
   (setq web-mode-css-indent-offset 4)
   (setq web-mode-code-indent-offset 4))
 
+(use-package yaml-mode
+  :mode ("\\.yml\\'" . yaml-mode))
+
 (use-package auto-complete
   :commands (ac-config-default)
   :config (ac-config-default))
