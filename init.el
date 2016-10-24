@@ -13,6 +13,22 @@
   (setq tab-always-indent (default-value 'tab-always-indent)))
 (add-hook 'asm-mode-hook 'my-asm-mode-hook)
 
+; silence free variable warnings during byte compile
+(eval-when-compile
+  (defvar lua-indent-level)
+  (defvar markdown-command)
+  (defvar markdown-preview-command)
+  (defvar web-mode-enable-auto-quoting)
+  (defvar web-mode-enable-auto-pairing)
+  (defvar web-mode-enable-auto-closing)
+  (defvar web-mode-style-padding)
+  (defvar web-mode-script-padding)
+  (defvar web-mode-block-padding)
+  (defvar web-mode-markup-indent-offset)
+  (defvar web-mode-css-indent-offset)
+  (defvar web-mode-code-indent-offset)
+  (defvar undo-tree-visualizer-timestamps))
+
 (use-package lua-mode
   :mode ("\\.lua\\'" . lua-mode)
   :interpreter ("lua" . lua-mode)
