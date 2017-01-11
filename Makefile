@@ -1,6 +1,7 @@
 DIR:=$(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 LINK=$(HOME)/.emacs.d
 
+.DEFAULT_GOAL:=install
 .PHONY: build clean install uninstall default fetch-deps fetch-updates update
 
 build:
@@ -9,7 +10,7 @@ build:
 clean:
 	git reset --hard
 
-install: build
+install: update build
 	ln -s $(DIR) $(LINK)
 
 uninstall: $(LINK)
@@ -24,5 +25,3 @@ fetch-updates:
 	git submodule update --init --recursive
 
 update: clean fetch-updates fetch-deps build
-
-default: update install
