@@ -4,13 +4,15 @@ LINK=$(HOME)/.emacs.d
 .DEFAULT_GOAL:=install
 .PHONY: build clean install uninstall default fetch-deps fetch-updates update
 
+# WARNING: Only run the build target after launching emacs for the first time so
+# that dependencies exist for the byte-compiler.
 build:
 	emacs --batch -L use-package -f batch-byte-compile init.el
 
 clean:
 	git reset --hard
 
-install: update build
+install: update
 	ln -s $(DIR) $(LINK)
 
 uninstall: $(LINK)
