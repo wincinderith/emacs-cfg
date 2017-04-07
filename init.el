@@ -70,10 +70,12 @@
   :mode ("\\.yml\\'" . yaml-mode))
 
 (use-package auto-complete
+  :demand t
   :commands (ac-config-default)
   :config (ac-config-default))
 
 (use-package undo-tree
+  :demand t
   :commands (global-undo-tree-mode)
   :config
   (global-undo-tree-mode)
