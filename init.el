@@ -105,4 +105,4 @@
  '(inhibit-startup-screen t)
  '(tool-bar-mode nil))
 (custom-set-faces
- '(default ((t (:family "Roboto Mono" :foundry "pyrs" :slant normal :weight normal :height 90 :width normal)))))
+ '(default ((t (:family "Ubuntu Mono" :foundry "pyrs" :slant normal :weight normal :height 90 :width normal)))))
