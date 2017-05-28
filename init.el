@@ -29,6 +29,9 @@
   (defvar web-mode-code-indent-offset)
   (defvar undo-tree-visualizer-timestamps))
 
+(use-package csharp-mode
+  :mode ("\\.cs\\'" . csharp-mode))
+
 (use-package lua-mode
   :mode ("\\.lua\\'" . lua-mode)
   :interpreter ("lua" . lua-mode)
