@@ -15,8 +15,8 @@ clean:
 install: update
 	ln -s $(DIR) $(LINK)
 
-uninstall: $(LINK)
-	rm $(LINK)
+uninstall:
+	unlink $(LINK)
 
 fetch-deps:
 	wget http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip
